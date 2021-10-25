@@ -1,0 +1,72 @@
+.rows__wrapper {
+	position: relative;
+	z-index: 50;
+}
+.btn__wrapper {
+	text-align: right;
+	padding-right: 55px;
+}
+.atuinBtn {
+	display: inline-flex;
+	margin-bottom: 5px;
+	padding: 5px 50px;
+	text-decoration: none;
+	position: relative;
+	text-align: center;
+	color: #fff;
+	font-weight: bold;
+	text-transform: uppercase;
+	font-family: "Roboto Condensed", Тahoma, sans-serif;
+	background: #241d1d;
+	cursor: pointer;
+	border: 2px solid #bfe2ff;
+}
+@media only screen and (min-width: 1500px) {
+	.atuinBtn {
+		margin-bottom: 50px;
+	}
+	.btn__wrapper {
+		padding: 0 145px;
+	}
+}
+.atuinBtn:hover,
+.atuinBtn:active,
+.atuinBtn:focus {
+	color: #fff;
+}
+.atuinBtn:before,
+.atuinBtn:after {
+	content: "";
+	border: 4px solid transparent;
+	position: absolute;
+	width: 0;
+	height: 0;
+	box-sizing: content-box;
+}
+.atuinBtn:before {
+	top: -6px;
+	left: -6px;
+}
+.atuinBtn:after {
+	bottom: -6px;
+	right: -6px;
+}
+.atuinBtn:hover:before,
+.atuinBtn:active:before,
+.atuinBtn:focus:before {
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	border-top-color: #d33535;
+	border-right-color: #d33535;
+	transition: width 0.2s ease-out, height 0.2s ease-out 0.2s;
+}
+.atuinBtn:hover:after,
+.atuinBtn:active:after,
+.atuinBtn:focus:after {
+	width: calc(100% + 4px);
+	height: calc(100% + 4px);
+	border-bottom-color: #337ab7;
+	border-left-color: #337ab7;
+	transition: border-color 0s ease-out 0.4s, width 0.2s ease-out 0.4s,
+		height 0.2s ease-out 0.6s;
+}

@@ -1,0 +1,30 @@
+.pagination__wrapper {
+	margin-bottom: 20px;
+	text-align: center;
+}
+.pagination_list {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.pagination__item {
+	padding: 10px;
+	color: #fff;
+	cursor: pointer;
+	font-size: 20px;
+	min-width: 20px;
+}
+.pagination__item:hover {
+	padding: 10px;
+	color: black;
+	cursor: pointer;
+	text-decoration: underline;
+}
+
+.active__item {
+	color: black;
+}
+.dn {
+	opacity: 0;
+	z-index: -1;
+}

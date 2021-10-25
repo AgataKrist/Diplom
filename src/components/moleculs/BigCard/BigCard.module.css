@@ -1,0 +1,32 @@
+.card__wrapper {
+	padding: 40px;
+	margin: 0 auto;
+	display: flex;
+}
+
+.card__contant {
+	display: flex;
+	justify-content: space-around;
+}
+.list__params {
+	display: flex;
+	flex-direction: column;
+	width: 50%;
+}
+.row__table {
+	display: flex;
+	justify-content: space-around;
+	height: 100%;
+}
+.td {
+	display: flex;
+	flex-wrap: wrap;
+	width: 50%;
+	border: 2px solid #fff;
+	padding: 10px;
+	white-space: normal;
+	font-size: 20px;
+}
+.card__img > img {
+	margin-bottom: 30px;
+}

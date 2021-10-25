@@ -1,0 +1,183 @@
+.container__page {
+	height: 100vh;
+	width: 100vw;
+	position: relative;
+	overflow: hidden;
+	background: #1f2326;
+}
+.bacground__circles {
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+.circle {
+	position: absolute;
+	border-radius: 50%;
+}
+.circle.red {
+	background: #ff4656;
+}
+
+.circle.big {
+	left: -100px;
+	top: -100px;
+	width: 500px;
+	height: 500px;
+}
+
+.circle.small.white {
+	width: 169px;
+	height: 169px;
+	background: #efefef;
+}
+
+.white.small.top {
+	right: 200px;
+	top: -119px;
+}
+.white.small.bottom {
+	left: 177px;
+	bottom: -123px;
+}
+
+.smallest {
+	width: 20px;
+	height: 20px;
+	right: 203px;
+	top: 25px;
+}
+.gray {
+	background: #505155;
+}
+.gray.top {
+	width: 50px;
+	height: 50px;
+	left: 1260px;
+	top: 8px;
+}
+.gray.bottom {
+	width: 400px;
+	height: 400px;
+	right: -28px;
+	bottom: -77px;
+}
+
+.mainPage {
+	width: calc(100vw - 100px);
+	height: calc(100vh - 100px);
+	position: absolute;
+	margin: 0;
+	background: #ff4656;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	z-index: 12;
+	overflow: auto;
+	border-right: 3px solid #1f2326;
+	border-left: 3px solid #1f2326;
+	border-bottom: 3px solid #1f2326;
+	border-radius: 40px 20px 10px 10px;
+	/* scroll-behavior: smooth; */
+}
+
+@media only screen and (min-width: 1500px) {
+	.mainPage {
+		width: calc(100vw - 400px);
+	}
+}
+/* .mainPage::after {
+	content: "";
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-size: cover;
+	opacity: 0.1;
+	background-image: url(../../../assets/fon.jpg);
+} */
+
+.main__content {
+	padding: 0 15px;
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	z-index: 20;
+}
+
+.container {
+	width: 100%;
+	max-width: 1230px;
+	padding: 0 15px;
+	margin: 0 auto;
+	position: relative;
+	text-align: center;
+	z-index: 20;
+}
+
+/*intro*/
+.intro {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	width: 100%;
+	min-height: calc(100vh - 140px);
+	position: relative;
+
+	margin-bottom: 50px;
+
+	background: url("../../../assets/fon.jpg") center no-repeat;
+	-webkit-background-size: cover;
+	background-size: cover;
+}
+.intro:after {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	background-color: #ff4656;
+	opacity: 0.7;
+}
+
+.intro_inner {
+	width: 100%;
+	max-width: 880px;
+	margin: 0 auto;
+
+	text-align: center;
+}
+
+.intro_title {
+	font-size: 150px;
+	color: #fff;
+	font-weight: 700;
+	text-transform: uppercase;
+	line-height: 1;
+}
+
+.intro_title:after {
+	content: "";
+	display: block;
+	width: 60px;
+	height: 3px;
+	margin: 60px auto;
+
+	background-color: #fff;
+}
+
+.intro_suptitle {
+	font-size: 72px;
+	color: #fff;
+	font-family: "Kaushan Script", cursive;
+	margin-bottom: 20px;
+}
+.about {
+	/* font-size: 20px; */
+}

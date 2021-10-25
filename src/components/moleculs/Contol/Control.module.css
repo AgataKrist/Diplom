@@ -1,0 +1,41 @@
+.control_wrapper {
+	width: 100%;
+}
+.control_contant {
+	display: flex;
+	justify-content: space-around;
+	align-items: center;
+	transform: translateX(-100%);
+	transition: 0.3s;
+	padding: 20px;
+	border: 2px solid red;
+	background-color: #ff828a;
+	margin-bottom: 10px;
+}
+.control_contant > button {
+	margin-bottom: 0;
+}
+.open {
+	transform: translateX(0);
+	transition: 0.2s;
+}
+.btn {
+	font-size: 50px;
+	color: white;
+}
+.btn:hover {
+	border: 1px solid;
+}
+input {
+	padding: 3px;
+
+	font-size: 20px;
+
+	border: 10px solid rgba(255, 255, 255, 0.5);
+
+	background: rgba(255, 255, 255, 0.5);
+
+	outline: none;
+
+	color: #333;
+}

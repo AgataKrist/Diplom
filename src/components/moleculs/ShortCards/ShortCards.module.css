@@ -1,0 +1,74 @@
+.cardRow__wrapper {
+	padding: 0 40px;
+	display: flex;
+	height: 300px;
+	align-items: center;
+	position: relative;
+	z-index: 20;
+}
+.cardRow__wrapper:first-child {
+	margin-bottom: 0px;
+}
+@media only screen and (min-width: 1500px) {
+	.cardRow__wrapper:first-child {
+		margin-bottom: 50px;
+	}
+	.cardRow__wrapper {
+		padding: 0 130px;
+	}
+}
+
+.choicedCard__wrapper {
+	margin-left: 150px;
+	cursor: pointer;
+	display: flex;
+	height: 260px;
+	min-width: 180px;
+
+	border-radius: 10px;
+	box-shadow: -1rem 0 3rem #000;
+	transition: 0.4s ease-out;
+	left: 0px;
+	position: relative;
+	z-index: 20;
+	background-size: cover;
+	background-position: center;
+	background-color: #fff;
+	background-repeat: no-repeat;
+}
+
+.card__wrapper {
+	display: flex;
+	flex: 1;
+	align-items: center;
+}
+
+.shortCard__container:first-of-type {
+	margin-bottom: 50px;
+}
+.comicsName__container {
+	width: 30px;
+	height: 280px;
+	margin-right: 120px;
+}
+
+.comicsName {
+	transform: rotate(90deg);
+}
+.slider__wrapper {
+	/* min-width: 40px;*/
+	padding: 0px 30px;
+}
+.slider {
+	min-width: 40px;
+	font-size: 20px;
+	font-weight: 700;
+	cursor: pointer;
+}
+.prev {
+	padding-right: 120px;
+	flex: 0;
+}
+.next {
+	padding-left: 20px;
+}

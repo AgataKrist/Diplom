@@ -1,0 +1,1 @@
+export { DCPage } from "./DCPage";

@@ -1,0 +1,36 @@
+.bar {
+	padding-left: 10px;
+	margin-bottom: 10px;
+	height: 5px;
+	width: 150px;
+	position: relative;
+}
+
+.emptybar {
+	background-color: #2e3033;
+	width: 80%;
+	height: 100%;
+	position: relative;
+}
+
+.filledbar {
+	position: absolute;
+	top: 0px;
+	z-index: 3;
+	height: 100%;
+	background: rgb(0, 154, 217);
+	background: linear-gradient(
+		90deg,
+		rgba(0, 154, 217, 1) 0%,
+		rgba(217, 147, 0, 1) 65%,
+		rgba(255, 186, 0, 1) 100%
+	);
+	transition: 0.6s ease-out;
+}
+.powerstats__img {
+	padding-left: 5px;
+	position: absolute;
+	display: inline-block;
+	top: -9px;
+	left: -20px;
+}
