@@ -1,0 +1,1 @@
+export { FightHistory } from "./FightHistory";
