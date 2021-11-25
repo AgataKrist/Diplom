@@ -11,6 +11,7 @@ import {
 	setDisabledBtnAction,
 	setFaceDCAction,
 	setFaceMarvelAction,
+	setHistoryFightAction,
 	setKikCountAction,
 	setRemaningLifesAction,
 	setRollingAction,
@@ -39,6 +40,7 @@ export const Fight = () => {
 		rolling,
 		remaningLifes,
 		winner,
+		historyFight,
 	} = useSelector(gameState) as any;
 
 	const dispatch = useDispatch();
@@ -59,8 +61,8 @@ export const Fight = () => {
 		);
 		dispatch(
 			setWinnerAction({
-				"DC Comics": 0,
-				"Marvel Comics": 0,
+				"DC Comics": null,
+				"Marvel Comics": null,
 			})
 		);
 
@@ -80,6 +82,32 @@ export const Fight = () => {
 		);
 		dispatch(setTableFightAction(newTableFight));
 	};
+
+	useEffect(() => {
+		if (kikCount === 6 && winner["DC Comics"] && winner["Marvel Comics"]) {
+			if (winner["DC Comics"] > winner["Marvel Comics"]) {
+				dispatch(
+					setHistoryFightAction(
+						`${fighterDC?.name} win ${fighterMarvel?.name}`
+					)
+				);
+			}
+			if (winner["DC Comics"] < winner["Marvel Comics"]) {
+				dispatch(
+					setHistoryFightAction(
+						`${fighterMarvel?.name} win ${fighterDC?.name}`
+					)
+				);
+			}
+			if (winner["DC Comics"] === winner["Marvel Comics"]) {
+				dispatch(
+					setHistoryFightAction(
+						`${fighterMarvel?.name} draw ${fighterDC?.name}`
+					)
+				);
+			}
+		}
+	}, [dispatch, fighterDC?.name, fighterMarvel?.name, kikCount, winner]);
 
 	const kik = (kikCount: number) => {
 		dispatch(setDisabledBtnAction(true));

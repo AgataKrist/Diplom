@@ -17,3 +17,6 @@ export const setRemaningLifesAction = createAction(
 	ACTIONS.SET_REMANING_LIFES
 )<any>();
 export const setWinnerAction = createAction(ACTIONS.SET_WINNER)<any>();
+export const setHistoryFightAction = createAction(
+	ACTIONS.SET_HISTORY_FIGHT
+)<string>();

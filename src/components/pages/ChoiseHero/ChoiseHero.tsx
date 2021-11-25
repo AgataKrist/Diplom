@@ -13,6 +13,7 @@ import { getHeroesState } from "../../../core/selectors/heroesSelector";
 import { MainTemplate } from "../../Templates/MainTemplate";
 import { useHistory } from "react-router";
 import { sliderNext, sliderPrev } from "../../../helper";
+import { setKikCountAction, setWinnerAction } from "../../../core";
 
 interface IShortCards {
 	heroDC?: any;
@@ -26,6 +27,14 @@ export const ChoiseHero = ({ heroDC, heroMarvel }: IShortCards) => {
 	const history = useHistory();
 
 	useEffect(() => {
+		dispatch(
+			setWinnerAction({
+				"DC Comics": null,
+				"Marvel Comics": null,
+			})
+		);
+		dispatch(setKikCountAction(0));
+
 		dispatch(getHeroesAction({ path: "/all.json" }));
 	}, [dispatch]);
 
