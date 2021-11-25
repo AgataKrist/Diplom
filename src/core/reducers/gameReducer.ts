@@ -11,6 +11,7 @@ import {
 	setRollingAction,
 	setRemaningLifesAction,
 	setWinnerAction,
+	setHistoryFightAction,
 } from "../actions/gameAction";
 
 export interface IGameState {
@@ -22,6 +23,7 @@ export interface IGameState {
 	kikCount: number;
 	isDisabledBtn: boolean;
 	rolling: boolean;
+	historyFight: string[];
 }
 
 const defaultState: IGameState = {
@@ -34,8 +36,8 @@ const defaultState: IGameState = {
 		number: 1,
 	},
 	winner: {
-		"DC Comics": 0,
-		"Marvel Comics": 0,
+		"DC Comics": null,
+		"Marvel Comics": null,
 	},
 	tableFight: null,
 	remaningLifes: null,
@@ -43,6 +45,7 @@ const defaultState: IGameState = {
 	kikCount: 0,
 	isDisabledBtn: false,
 	rolling: false,
+	historyFight: [],
 };
 
 const actions = {
@@ -54,6 +57,7 @@ const actions = {
 	setRollingAction,
 	setRemaningLifesAction,
 	setWinnerAction,
+	setHistoryFightAction,
 };
 
 export const gameReducer = createReducer<
@@ -97,4 +101,8 @@ export const gameReducer = createReducer<
 	.handleAction(setWinnerAction, (state, { payload: winner }) => ({
 		...state,
 		winner,
+	}))
+	.handleAction(setHistoryFightAction, (state, { payload: history }) => ({
+		...state,
+		historyFight: [...state.historyFight, history],
 	}));
